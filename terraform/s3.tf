@@ -1,7 +1,7 @@
 # Raw Data S3 Bucket
 
 resource "aws_s3_bucket" "raw_data_bucket" {
-  bucket = var.raw_data_bucket_name
+  bucket = "real-state-data-${var.user_name}-${random_string.unique_suffix.result}"
 
   tags = merge(
     local.tags,

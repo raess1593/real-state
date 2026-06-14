@@ -13,7 +13,7 @@ variable "environment" {
   default = "dev"
 }
 
-variable "raw_data_bucket_name" {
-  type        = string
-  description = "Scraped raw data bucket"
+variable "user_name" {
+  type    = string
+  description = "Name to identify developer"
 }
