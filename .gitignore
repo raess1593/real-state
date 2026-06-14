@@ -1,3 +1,12 @@
 # terraform
 .terraform/
 dev.tfvars
+
+# python
+__pycache__/
+.venv/
+.env
+
+# data
+*.csv
+data/
