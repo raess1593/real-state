@@ -94,8 +94,4 @@ class RealEstateScraper:
         os.makedirs(os.path.dirname(output_file), exist_ok=True)
         self.save_data(output_file)
         logger.info("Saved %s scraped properties to %s", len(self.data), output_file)
-
-
-if __name__ == "__main__":
-    scraper = RealEstateScraper(page_limit=5)
-    scraper.run()
+        return output_file
