@@ -5,7 +5,9 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "aws>=0.2.5",
     "black>=26.5.1",
+    "boto3>=1.43.36",
     "bs4>=0.0.2",
     "isort>=8.0.1",
     "make>=0.1.6.post2",
