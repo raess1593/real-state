@@ -1,5 +1,5 @@
 .PHONY: lint
 
 lint:
-	black src
-	isort src
+	black src main.py
+	isort src main.py
