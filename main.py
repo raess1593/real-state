@@ -2,8 +2,8 @@ import os
 
 from dotenv import load_dotenv
 
-from cloud_manager import AWSCloudManager
-from scraper import RealEstateScraper
+from src.cloud_manager import AWSCloudManager
+from src.scraper import RealEstateScraper
 
 load_dotenv()
 
