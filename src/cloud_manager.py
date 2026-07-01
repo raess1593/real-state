@@ -48,7 +48,9 @@ class AWSCloudManager:
             self.s3_client.download_file(
                 Bucket=self.bucket_name, Key=latest_object["Key"], Filename=local_path
             )
-            logger.info(f"Successfully downloaded the latest JSON from S3 to {local_path}")
+            logger.info(
+                f"Successfully downloaded the latest JSON from S3 to {local_path}"
+            )
             return True
 
         except ClientError as e:

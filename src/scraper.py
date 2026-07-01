@@ -57,7 +57,9 @@ class RealEstateScraper:
                 location_div = prop.find("div", class_="property-location")
                 location = location_div.get("title")
                 try:
-                    meters = prop.find("span", class_="ere__lpi-value").get_text(strip=True)
+                    meters = prop.find("span", class_="ere__lpi-value").get_text(
+                        strip=True
+                    )
                 except Exception:
                     logger.exception("Error occurred while extracting meters")
                     meters = None
