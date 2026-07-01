@@ -25,7 +25,7 @@ class ScrapedProperty(TypedDict):
 
 class RealEstateScraper:
     def __init__(self, url: str | None = None, page_limit: int = 1) -> None:
-        self.url: str | None = url or os.getenv("url")
+        self.url: str | None = url or os.getenv("BASE_URL")
         self.page_limit: int = page_limit
         self.data: list[ScrapedProperty] = []
 
@@ -56,7 +56,11 @@ class RealEstateScraper:
                 price = prop.find("span", class_="property-price").get_text(strip=True)
                 location_div = prop.find("div", class_="property-location")
                 location = location_div.get("title")
-                meters = prop.find("span", class_="ere__lpi-value").get_text(strip=True)
+                try:
+                    meters = prop.find("span", class_="ere__lpi-value").get_text(strip=True)
+                except Exception:
+                    logger.exception("Error occurred while extracting meters")
+                    meters = None
                 self.data.append(
                     {
                         "title": title,
