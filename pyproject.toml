@@ -11,6 +11,7 @@ dependencies = [
     "bs4>=0.0.2",
     "isort>=8.0.1",
     "make>=0.1.6.post2",
+    "pandas>=3.0.3",
     "python-dotenv>=1.2.2",
     "requests>=2.34.2",
 ]
